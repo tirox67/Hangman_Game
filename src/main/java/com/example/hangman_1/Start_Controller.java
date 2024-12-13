@@ -427,6 +427,9 @@ public class Start_Controller implements Initializable {
         for(Button i : Buttonlist ){ i.setVisible(false); }
         Restart_button.setVisible(true);
 
+        //show secret_word
+        Secret_Label.setText(String.valueOf(Gamelogic.getSecret_word()));
+
     }//end of Show_loose
 
     @FXML
@@ -452,6 +455,7 @@ public class Start_Controller implements Initializable {
 
         //update Secret_label
         Counter = 0;
+        Gamelogic.setCounter(0);
         update_Secret_label();
 
     }//end of restart
