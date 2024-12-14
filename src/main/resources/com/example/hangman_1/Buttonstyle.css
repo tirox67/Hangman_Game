@@ -1,0 +1,24 @@
+/* ButtonStyle.css */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #d3d3d3, #ffffff); /* Grey to white gradient */
+    -fx-text-fill: black; /* Black text color */
+    -fx-border-color: black; /* Black border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-background-radius: 25px; /* Oval shape */
+    -fx-border-radius: 25px; /* Match the background radius */
+    -fx-padding: 10px 20px; /* Adjust padding for better spacing */
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-family: "Arial"; /* Font family */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 4, 0.5, 0, 2); /* Subtle shadow */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #d3d3d3); /* Invert gradient on hover */
+    -fx-border-color: grey; /* Lighter border on hover */
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #c0c0c0, #a9a9a9); /* Darker gradient when pressed */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0.3, 0, 1); /* Adjust shadow */
+}

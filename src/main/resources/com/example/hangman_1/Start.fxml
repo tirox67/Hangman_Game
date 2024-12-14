@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="559" maxWidth="1000" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="1000.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hangman_1.Start_Controller">
+   <children>
+      <ImageView fx:id="Start_Image" fitHeight="689.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Imgs/idk.jpeg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <Button fx:id="Play_Button" layoutX="240.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#handlePlayButtonClick" prefHeight="63.0" prefWidth="390.0" style="-fx-border-style: black;" text="Play" />
+      <Button fx:id="Credits_Button" layoutX="240.0" layoutY="436.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="390.0" text="Credits">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="A_Button" layoutX="25.0" layoutY="365.0" mnemonicParsing="false" onAction="#A_button_onclick" prefHeight="48.0" prefWidth="48.0" text="A" visible="false" />
+      <ImageView fx:id="Table_image" fitHeight="419.0" fitWidth="600.0" layoutX="419.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../Imgs/Tafel-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="B_Button" layoutX="97.0" layoutY="365.0" mnemonicParsing="false" onAction="#B_button_onclick" prefHeight="48.0" prefWidth="48.0" text="B" visible="false" />
+      <Button fx:id="C_Button" layoutX="169.0" layoutY="365.0" mnemonicParsing="false" onAction="#C_button_onclick" prefHeight="48.0" prefWidth="48.0" text="C" visible="false" />
+      <Button fx:id="D_Button" layoutX="240.0" layoutY="365.0" mnemonicParsing="false" onAction="#D_button_onclick" prefHeight="48.0" prefWidth="48.0" text="D" visible="false" />
+      <Button fx:id="E_Button" layoutX="312.0" layoutY="365.0" mnemonicParsing="false" onAction="#E_button_onclick" prefHeight="48.0" prefWidth="48.0" text="E" visible="false" />
+      <Button fx:id="F_Button" layoutX="395.0" layoutY="365.0" mnemonicParsing="false" onAction="#F_button_onclick" prefHeight="48.0" prefWidth="48.0" text="F" visible="false" />
+      <Button fx:id="G_Button" layoutX="476.0" layoutY="365.0" mnemonicParsing="false" onAction="#G_button_onclick" prefHeight="48.0" prefWidth="48.0" text="G" visible="false" />
+      <Button fx:id="H_Button" layoutX="560.0" layoutY="365.0" mnemonicParsing="false" onAction="#H_button_onclick" prefHeight="48.0" prefWidth="48.0" text="H" visible="false" />
+      <Button fx:id="I_Button" layoutX="630.0" layoutY="365.0" mnemonicParsing="false" onAction="#I_button_onclick" prefHeight="48.0" prefWidth="48.0" text="I" visible="false" />
+      <Button fx:id="J_Button" layoutX="705.0" layoutY="365.0" mnemonicParsing="false" onAction="#J_button_onclick" prefHeight="48.0" prefWidth="48.0" text="J" visible="false" />
+      <Button fx:id="K_Button" layoutX="25.0" layoutY="436.0" mnemonicParsing="false" onAction="#K_button_onclick" prefHeight="48.0" prefWidth="48.0" text="K" visible="false" />
+      <Button fx:id="L_Button" layoutX="97.0" layoutY="436.0" mnemonicParsing="false" onAction="#L_button_onclick" prefHeight="48.0" prefWidth="48.0" text="L" visible="false" />
+      <Button fx:id="N_Button" layoutX="169.0" layoutY="436.0" mnemonicParsing="false" onAction="#N_button_onclick" prefHeight="48.0" prefWidth="48.0" text="N" visible="false" />
+      <Button fx:id="M_Button" layoutX="240.0" layoutY="436.0" mnemonicParsing="false" onAction="#M_button_onclick" prefHeight="48.0" prefWidth="48.0" text="M" visible="false" />
+      <Button fx:id="O_Button" layoutX="312.0" layoutY="436.0" mnemonicParsing="false" onAction="#O_button_onclick" prefHeight="48.0" prefWidth="48.0" text="O" visible="false" />
+      <Button fx:id="P_Button" layoutX="395.0" layoutY="436.0" mnemonicParsing="false" onAction="#P_button_onclick" prefHeight="48.0" prefWidth="48.0" text="P" visible="false" />
+      <Button fx:id="Q_Button" layoutX="476.0" layoutY="436.0" mnemonicParsing="false" onAction="#Q_button_onclick" prefHeight="48.0" prefWidth="48.0" text="Q" visible="false" />
+      <Button fx:id="R_Button" layoutX="561.0" layoutY="436.0" mnemonicParsing="false" onAction="#R_button_onclick" prefHeight="48.0" prefWidth="48.0" text="R" visible="false" />
+      <Button fx:id="S_Button" layoutX="630.0" layoutY="436.0" mnemonicParsing="false" onAction="#S_button_onclick" prefHeight="48.0" prefWidth="48.0" text="S" visible="false" />
+      <Button fx:id="T_Button" layoutX="705.0" layoutY="436.0" mnemonicParsing="false" onAction="#T_button_onclick" prefHeight="48.0" prefWidth="48.0" text="T" visible="false" />
+      <Button fx:id="U_Button" layoutX="25.0" layoutY="499.0" mnemonicParsing="false" onAction="#U_button_onclick" prefHeight="48.0" prefWidth="48.0" text="U" visible="false" />
+      <Button fx:id="V_Button" layoutX="97.0" layoutY="499.0" mnemonicParsing="false" onAction="#V_button_onclick" prefHeight="48.0" prefWidth="48.0" text="V" visible="false" />
+      <Button fx:id="W_Button" layoutX="169.0" layoutY="499.0" mnemonicParsing="false" onAction="#W_button_onclick" prefHeight="48.0" prefWidth="48.0" text="w" visible="false" />
+      <Button fx:id="X_Button" layoutX="240.0" layoutY="499.0" mnemonicParsing="false" onAction="#X_button_onclick" prefHeight="48.0" prefWidth="48.0" text="X" visible="false" />
+      <Button fx:id="Y_Button" layoutX="312.0" layoutY="499.0" mnemonicParsing="false" onAction="#Y_button_onclick" prefHeight="48.0" prefWidth="48.0" text="Y" visible="false" />
+      <Button fx:id="Z_Button" layoutX="395.0" layoutY="499.0" mnemonicParsing="false" onAction="#Z_button_onclick" prefHeight="48.0" prefWidth="48.0" text="Z" visible="false" />
+      <Label fx:id="Secret_Label" layoutX="25.0" layoutY="145.0" prefHeight="55.0" prefWidth="407.0" visible="false">
+         <font>
+            <Font size="38.0" />
+         </font></Label>
+      <ImageView fx:id="Stage_2" fitHeight="138.0" fitWidth="139.0" layoutX="515.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../Imgs/Stage1-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Stage_1" fitHeight="276.0" fitWidth="181.0" layoutX="494.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../Imgs/Stage2-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Stage_3" fitHeight="150.0" fitWidth="200.0" layoutX="822.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../Imgs/Stage3-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Stage_4" fitHeight="150.0" fitWidth="200.0" layoutX="687.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../Imgs/Stage3-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Stage_5" fitHeight="150.0" fitWidth="200.0" layoutX="660.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../Imgs/Stage5-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Stage_6" fitHeight="150.0" fitWidth="200.0" layoutX="540.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../Imgs/Stage6-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="Loose_Label" layoutX="264.0" layoutY="181.0" text="GAME OVER" textFill="#9e2525" textOverrun="CLIP" visible="false">
+         <font>
+            <Font size="72.0" />
+         </font>
+      </Label>
+      <Button fx:id="Restart_button" layoutX="330.0" layoutY="322.0" mnemonicParsing="false" onAction="#restart" prefHeight="55.0" prefWidth="254.0" text="Restart" visible="false" />
+      <Button fx:id="Ä_Button" layoutX="476.0" layoutY="499.0" mnemonicParsing="false" onAction="#Ä_button_onclick" prefHeight="48.0" prefWidth="48.0" text="Ä" visible="false" />
+      <Button fx:id="Ö_Button" layoutX="560.0" layoutY="499.0" mnemonicParsing="false" onAction="#Ö_button_onclick" prefHeight="48.0" prefWidth="48.0" text="Ö" visible="false" />
+      <Button fx:id="Ü_Button" layoutX="630.0" layoutY="499.0" mnemonicParsing="false" onAction="#Ü_button_onclick" prefHeight="48.0" prefWidth="48.0" text="Ü" visible="false" />
+      <Label fx:id="Win_label" layoutX="325.0" layoutY="181.0" text="WINNER" textFill="#2f9c25" textOverrun="CLIP" visible="false">
+         <font>
+            <Font size="72.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
