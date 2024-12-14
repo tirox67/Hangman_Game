@@ -2,7 +2,6 @@ package com.example.hangman_1;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -10,7 +9,6 @@ import javafx.scene.image.ImageView;
 
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Start_Controller implements Initializable {
@@ -116,7 +114,10 @@ public class Start_Controller implements Initializable {
     @FXML
     private Label Loose_Label;
     @FXML
+    private Label Win_label;
+    @FXML
     private Button Restart_button;
+
 
     //------------------------------------
 
@@ -391,9 +392,14 @@ public class Start_Controller implements Initializable {
 
     //logic to keep track of the mistakes and adjust the Hangman to the current state of Counter!
     static int Counter =0;
+
     public static void update(){
         Counter++;
+
+
     }
+
+    //logic to draw the stages,and to detect either win or loose
     public void draw_stages(){
         switch(Counter){
             case 1:
@@ -417,7 +423,20 @@ public class Start_Controller implements Initializable {
                 Show_loose();
                 break;
 
+        }//end of switch case
+
+        //logic to detect a win
+        boolean flag = false;
+        for(int i =0; i < Gamelogic.getSecret_word().length; i++){
+            for(int j =0; j< Gamelogic.getGuessed_chars().length; j++){
+               if(Gamelogic.getGuessed_chars()[j] == Gamelogic.getSecret_word()[i]){
+                   flag = true;
+                   break;
+               }else{flag = false;}
+            }
+            if(!flag){return;}
         }
+        Show_win();
     }//end of draw_stage_1
 
     //show deathscreen/menu
@@ -432,6 +451,19 @@ public class Start_Controller implements Initializable {
 
     }//end of Show_loose
 
+    //show Winscreen/menu
+    private void Show_win(){
+        Win_label.setVisible(true);
+        //set all the Buttons invisible; Wanted a cleaner looking deathscreen!
+        for(Button i : Buttonlist ){ i.setVisible(false); }
+        Restart_button.setVisible(true);
+
+        //show secret_word
+        Secret_Label.setText(String.valueOf(Gamelogic.getSecret_word()));
+
+
+    }//end of show_win
+
     @FXML
     private void restart(){
 
@@ -439,6 +471,7 @@ public class Start_Controller implements Initializable {
         Play_Button.setVisible(false);
         Credits_Button.setVisible(false);
         Loose_Label.setVisible(false);
+        Win_label.setVisible(false);
         Restart_button.setVisible(false);
 
         //set all the Buttons we stored in Buttonlist acitive and visible as they might be deactivated
