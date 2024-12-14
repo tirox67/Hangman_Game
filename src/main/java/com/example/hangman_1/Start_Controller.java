@@ -117,6 +117,8 @@ public class Start_Controller implements Initializable {
     private Label Win_label;
     @FXML
     private Button Restart_button;
+    @FXML
+    private Button Back_button;
 
 
     //------------------------------------
@@ -145,6 +147,8 @@ public class Start_Controller implements Initializable {
 
 
         Secret_Label.setText(String.valueOf(G_word));
+
+        restart();
     }
 
     @FXML
@@ -389,6 +393,24 @@ public class Start_Controller implements Initializable {
         draw_stages();
     }
 
+    @FXML
+    private void on_Back_button_click(){
+        Play_Button.setVisible(true);
+        Credits_Button.setVisible(true);
+        Start_Image.setVisible(true);
+
+        Secret_Label.setVisible(false);
+        for(ImageView i : Stagelist){ i.setVisible(false); }
+        Table_image.setVisible(false);
+        Loose_Label.setVisible(false);
+        Win_label.setVisible(false);
+        Restart_button.setVisible(false);
+        Back_button.setVisible(false);
+
+
+
+    }//end of on_Back_button_click
+
 
     //logic to keep track of the mistakes and adjust the Hangman to the current state of Counter!
     static int Counter =0;
@@ -445,6 +467,7 @@ public class Start_Controller implements Initializable {
         //set all the Buttons invisible; Wanted a cleaner looking deathscreen!
         for(Button i : Buttonlist ){ i.setVisible(false); }
         Restart_button.setVisible(true);
+        Back_button.setVisible(true);
 
         //show secret_word
         Secret_Label.setText(String.valueOf(Gamelogic.getSecret_word()));
@@ -457,6 +480,7 @@ public class Start_Controller implements Initializable {
         //set all the Buttons invisible; Wanted a cleaner looking deathscreen!
         for(Button i : Buttonlist ){ i.setVisible(false); }
         Restart_button.setVisible(true);
+        Back_button.setVisible(true);
 
         //show secret_word
         Secret_Label.setText(String.valueOf(Gamelogic.getSecret_word()));
