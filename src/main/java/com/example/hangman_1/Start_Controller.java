@@ -485,6 +485,7 @@ public class Start_Controller implements Initializable {
         for(Button i : Buttonlist ){ i.setVisible(false); }
         Restart_button.setVisible(true);
         Back_button.setVisible(true);
+        Hint_button.setVisible(false);
 
         //show secret_word
         Secret_Label.setText(String.valueOf(Gamelogic.getSecret_word()));
@@ -498,6 +499,7 @@ public class Start_Controller implements Initializable {
         for(Button i : Buttonlist ){ i.setVisible(false); }
         Restart_button.setVisible(true);
         Back_button.setVisible(true);
+        Hint_button.setVisible(false);
 
         //show secret_word
         Secret_Label.setText(String.valueOf(Gamelogic.getSecret_word()));
@@ -518,6 +520,8 @@ public class Start_Controller implements Initializable {
 
         //set all the Buttons we stored in Buttonlist acitive and visible as they might be deactivated
         for(Button i : Buttonlist ){ i.setVisible(true); i.setDisable(false); }
+
+        Hint_button.setVisible(true);
 
         //set all the Stages invisible again
         for(ImageView j : Stagelist){j.setVisible(false);}

@@ -76,7 +76,6 @@ public class Gamelogic {
 
     private static int counter = 0; // Counter to track guesses index
 
-
     public static int getCounter()
     {return counter;}
 
