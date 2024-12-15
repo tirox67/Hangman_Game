@@ -5,6 +5,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 
 
 
@@ -119,6 +124,8 @@ public class Start_Controller implements Initializable {
     private Button Restart_button;
     @FXML
     private Button Back_button;
+    @FXML
+    private Button Hint_button;
 
 
     //------------------------------------
@@ -133,11 +140,13 @@ public class Start_Controller implements Initializable {
         Credits_Button.setVisible(false);
 
 
+
         //set all the Buttons we stored in Buttonlist visible
         for(Button i : Buttonlist ){ i.setVisible(true); }
 
         Table_image.setVisible(true);
         Secret_Label.setVisible(true);
+        Hint_button.setVisible(true);
 
 
         //generate the word
@@ -406,10 +415,18 @@ public class Start_Controller implements Initializable {
         Win_label.setVisible(false);
         Restart_button.setVisible(false);
         Back_button.setVisible(false);
+        Hint_button.setVisible(false);
 
 
 
     }//end of on_Back_button_click
+
+    @FXML
+    private void on_Hint_Button_click(){
+        System.out.println(1);
+        Gamelogic.Hint();
+        update_Secret_label();
+    }//end of on_Hint_Button_click
 
 
     //logic to keep track of the mistakes and adjust the Hangman to the current state of Counter!
@@ -497,6 +514,7 @@ public class Start_Controller implements Initializable {
         Loose_Label.setVisible(false);
         Win_label.setVisible(false);
         Restart_button.setVisible(false);
+        Back_button.setVisible(false);
 
         //set all the Buttons we stored in Buttonlist acitive and visible as they might be deactivated
         for(Button i : Buttonlist ){ i.setVisible(true); i.setDisable(false); }
@@ -516,6 +534,11 @@ public class Start_Controller implements Initializable {
         update_Secret_label();
 
     }//end of restart
+
+    @FXML
+    private void on_credits_button_click() {
+
+    }
 
 
     //Purpose: Push all thr Buttons in Buttonlist/ could not find a good library for that. So may be changed!

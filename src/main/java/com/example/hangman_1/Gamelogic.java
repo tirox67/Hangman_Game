@@ -100,5 +100,19 @@ public class Gamelogic {
         return true;
     }//end of add_char
 
+    //logic to give a single letter Hint
+    public static  void Hint() {
+
+        for(char i : Secret_word) {
+            for(char j : Guessed_chars) {
+                if(i == j) {break;}
+                if(j== Guessed_chars[Guessed_chars.length-1]){
+                    add_char(i);
+                    return;
+                }
+            }
+        }
+    }//end of Hint
+
 
 }//end of class

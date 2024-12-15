@@ -16,7 +16,7 @@
             <Cursor fx:constant="HAND" />
          </cursor></ImageView>
       <Button fx:id="Play_Button" layoutX="240.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#handlePlayButtonClick" prefHeight="63.0" prefWidth="390.0" style="-fx-border-style: black;" text="Play" />
-      <Button fx:id="Credits_Button" layoutX="240.0" layoutY="436.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="390.0" text="Credits">
+      <Button fx:id="Credits_Button" layoutX="240.0" layoutY="436.0" mnemonicParsing="false" onAction="#on_credits_button_click" prefHeight="63.0" prefWidth="390.0" text="Credits">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
@@ -100,5 +100,6 @@
          </font>
       </Label>
       <Button fx:id="Back_button" layoutX="330.0" layoutY="409.0" mnemonicParsing="false" onAction="#on_Back_button_click" prefHeight="55.0" prefWidth="254.0" text="Back to menu" visible="false" />
+      <Button fx:id="Hint_button" layoutX="822.0" layoutY="436.0" mnemonicParsing="false" onAction="#on_Hint_Button_click" prefHeight="48.0" prefWidth="103.0" text="Hint" visible="false" />
    </children>
 </AnchorPane>
