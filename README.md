@@ -4,6 +4,7 @@ Here is a GUI-Hangman game I created: It's easy to play and contains just the co
 
 ![Startscreen](src/main/resources/Imgs/Screenshot%202024-12-19%20054649.png)
 
-![Ingame](src/main/resources/Imgs/Screenshot 2024-12-19 054708.png)
+![Ingame](src/main/resources/Imgs/Screenshot%202024-12-19%20054708.png)
+
 
 
