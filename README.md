@@ -1,5 +1,5 @@
-##Hangman
+## Hangman
 
-Here is a GUI-Hangamn game i created:
-Its easy to play and contains just the core features Hangman has to have. Besites that, ive decited to add unlimited hints if you want to. The words are only provided in german.
-![Startscreem]("src/main/resources/Imgs/Screenshot 2024-12-19 054649.png")
+Here is a GUI-Hangman game I created: It's easy to play and contains just the core features Hangman has to have. Besides that, I've decided to add unlimited hints if you want to. The words are only provided in German.
+
+![Startscreen](src/main/resources/Imgs/Screenshot%202024-12-19%20054649.png)
